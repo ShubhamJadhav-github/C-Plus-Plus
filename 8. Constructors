@@ -1,0 +1,49 @@
+// Program in CPP
+// To demonstarate the use of default, parameterized constructors
+// and constructor overloading...
+
+#include<iostream>
+using namespace std;
+class Iota
+{
+    private:
+    int i;
+    public:
+    Iota()
+    {
+        cout<<"\nDefault constructor\n";
+    }
+    Iota(int x)
+    {
+        cout<<"\nParameterized constructor\n";
+        i = x;
+    }
+    void setData(int x)
+    {
+        i = x;
+    }
+    void getData()
+    {
+        cout<<"\nEnter Value of I: ";
+        cin>>i;
+    }
+    void displayData()
+    {
+        cout<<"\nValue of I: "<<i<<endl;
+    }
+
+};
+
+int main()
+{
+    Iota i1(100),i2,i3;
+    i1.displayData();
+
+    i2.setData(200);
+    i2.displayData();
+
+    i3.getData();
+    i3.displayData();
+
+    return 0;
+}
